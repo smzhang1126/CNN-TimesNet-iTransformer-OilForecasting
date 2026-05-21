@@ -50,33 +50,25 @@ Recommended environment:
 
 It is recommended to use a virtual environment such as `conda` or `venv`.
 
----
-
 ### 3.2 Clone the Repository
 
 ```bash
 git clone https://github.com/smzhang1126/CNN-TimesNet-iTransformer-OilForecasting.git
 cd CNN-TimesNet-iTransformer-OilForecasting
-
-```bash
-git clone https://github.com/smzhang1126/CNN-TimesNet-iTransformer-OilForecasting.git
-cd CNN-TimesNet-iTransformer-OilForecasting
-
+```
 ---
 
 ## 4. Environment Requirements
+
 The code was developed and tested using Python. The recommended environment is:
 
-Python >= 3.8
-PyTorch
-NumPy
-Pandas
-Scikit-learn
-XGBoost
-Matplotlib
-PyYAML
-
-A GPU is recommended for model training, but the quick-test example can be executed on CPU.
+- Python >= 3.8
+- PyTorch
+- NumPy
+- Pandas
+- Scikit-learn
+- XGBoost
+- Matplotlib
 
 ---
 
@@ -87,13 +79,13 @@ A GPU is recommended for model training, but the quick-test example can be execu
 ```bash
 git clone https://github.com/smzhang1126/CNN-TimesNet-iTransformer-OilForecasting.git
 cd CNN-TimesNet-iTransformer-OilForecasting
-
+```
 ## 5.2 Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 pip install numpy pandas scikit-learn xgboost matplotlib pyyaml torch
-
+```
 ---
 
 ## 6. Data Description
@@ -104,7 +96,7 @@ A typical input file may contain columns such as:
 
 ```text
 date, oil_production, water_cut, liquid_production, pressure, injection_rate, ...
-
+```
 ---
 
 ## 7. Quick Test
@@ -112,11 +104,11 @@ date, oil_production, water_cut, liquid_production, pressure, injection_rate, ..
 A quick-test script is provided to verify whether the repository can run correctly.
 ```bash
 python quick_test.py
-
+```
 The quick test will:
 
-Load the example dataset from data/example_data.csv
-Perform basic preprocessing
-Build the forecasting model
-Run a short training or inference process
-Output basic evaluation metrics
+- Load the example dataset from `data/example_data.csv`
+- Perform basic preprocessing
+- Build the forecasting model
+- Run a short training or inference process
+- Output basic evaluation metrics
