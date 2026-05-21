@@ -74,13 +74,13 @@ The code was developed and tested using Python. The recommended environment is:
 
 ## 5. Installation
 
-## 5.1 Clone the Repository
+### 5.1 Clone the Repository
 
 ```bash
 git clone https://github.com/smzhang1126/CNN-TimesNet-iTransformer-OilForecasting.git
 cd CNN-TimesNet-iTransformer-OilForecasting
 ```
-## 5.2 Install Dependencies
+### 5.2 Install Dependencies
 
 ```bash
 pip install -r requirements.txt
