@@ -101,6 +101,8 @@ date, oil_production, water_cut, liquid_production, pressure, injection_rate, ..
 
 ## 7. Quick Test
 
+### 7.1 Run the quick test
+
 A quick-test script is provided to verify whether the repository can run correctly.
 ```bash
 python quick_test.py
@@ -112,3 +114,66 @@ The quick test will:
 - Build the forecasting model
 - Run a short training or inference process
 - Output basic evaluation metrics
+  
+### 7.2 Expected output
+
+After running the script, the terminal should print training loss and evaluation metrics such as:
+```bash
+Loading example data...
+Building CNN-TimesNet-iTransformer quick-test model...
+Running quick test...
+Epoch [1/10], Loss: ...
+Epoch [2/10], Loss: ...
+...
+Quick test completed successfully.
+MAE:  ...
+RMSE: ...
+R2:   ...
+Prediction results saved to: results/quick_test_predictions.csv
+```
+The exact numerical values may vary depending on the computing environment and package versions.
+
+---
+
+## 8. Running with User Data
+
+To run the workflow using user-provided data, prepare a CSV file with the same column names as the example dataset:
+
+```text
+date,well_id,oil_production,liquid_production,water_cut,formation_pressure,bottom_hole_pressure,casing_pressure,tubing_pressure,back_pressure,injection_rate
+```
+
+Then replace:
+```text
+oil_production
+```
+
+with the user dataset, or modify the data path in `quick_test.py`:
+```bash
+DATA_PATH = "data/example_data.csv"
+```
+
+The target variable is:
+```text
+oil_production
+```
+
+The default input features are:
+```text
+liquid_production
+water_cut
+formation_pressure
+bottom_hole_pressure
+casing_pressure
+tubing_pressure
+back_pressure
+injection_rate
+```
+
+After running the quick test, the following file will be generated:
+```text
+results/quick_test_predictions.csv
+```
+The `results/` directory is created automatically if it does not already exist.
+
+---
